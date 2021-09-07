@@ -38,6 +38,7 @@ if __name__ == '__main__':
     url_file_name = input('File or Url:\n')
 
     if '://' in url_file_name:
+        # id 是用作log
         CrackTask().run(1, url_file_name)
     else:
         url_list = []

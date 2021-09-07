@@ -43,6 +43,7 @@ class CrackTask:
         Log.init_log_id(id)
         Log.Info(f"[*] Start: {url}")
         try:
+            #界面解析
             self.parser = Parser(self.url)
             if not self.parser.run():
                 return

@@ -11,6 +11,9 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 class Parser:
+    '''
+    解析界面，找到表单的关键字
+    '''
     id = 0
     url = ''
     post_path = ''
