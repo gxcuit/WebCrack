@@ -24,7 +24,7 @@ crackConfig = {
         # "http": "127.0.0.1:8080",
         # "https": "127.0.0.1:8080"
     },
-    "fail_words": ['密码错误', '重试', '不正确', '密码有误', '不成功', '重新输入', '不存在', '登录失败', '登陆失败', '密码或安全问题错误', 'history.go',
+    "fail_words": ['incorrect','密码错误', '重试', '不正确', '密码有误', '不成功', '重新输入', '不存在', '登录失败', '登陆失败', '密码或安全问题错误', 'history.go',
                    'history.back',
                    '已被锁定', '安全拦截', '还可以尝试', '无效', '攻击行为', '创宇盾', 'http://zhuji.360.cn/guard/firewall/stopattack.html',
                    'D盾_拦截提示', '用户不存在',
@@ -61,7 +61,7 @@ generatorConfig = {
         }
     },
     "headers_config": {
-        "enable": True,
+        "enable": False,
         "useragent_list": [
             "Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0",
             "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US) AppleWebKit/532.0 (KHTML, like Gecko) Chrome/3.0.195.6 Safari/532.0",
@@ -75,11 +75,12 @@ generatorConfig = {
             "Mozilla/5.0 (Windows; U; Windows NT 6.0; fr-FR) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5"
         ],
         "default_headers": {
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'User-Agent': "WebCrack Test",
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
             'Accept-Encoding': 'gzip, deflate',
             'Accept-Language': 'zh-CN,zh;q=0.8',
-            "Referer": "http://www.baidu.com/",
+            #"Referer": "http://www.baidu.com/",
+            'Cookie': 'PHPSESSID=dspqpd9s5b32u1tc5c4j5ind4c; security=low',
             'Content-Type': 'application/x-www-form-urlencoded'}
     }
 }

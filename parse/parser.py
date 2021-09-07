@@ -31,11 +31,12 @@ class Parser:
             self.cms_parser()
             self.form_parser()
             self.check_login_page()
-            self.captcha_parser()
+            #self.captcha_parser()
             self.post_path_parser()
             self.param_parser()
         except Exception as e:
-            Log.Error(f"[-] {self.url} Parse Error: " + str(e))
+            print(repr(e))
+            Log.Error(f"[-] {self.url} Parse Error: " + str(e.__traceback__))
             return False
         return True
 

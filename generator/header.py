@@ -23,6 +23,6 @@ def get_random_headers():  # 生成随机headers
             "Referer": "http://www.baidu.com/",
             'Content-Type': 'application/x-www-form-urlencoded'}
     else:
-        headers = generatorConfig["rand_headers_config"]["default_headers"]
+        headers = generatorConfig["headers_config"]["default_headers"]
 
     return headers

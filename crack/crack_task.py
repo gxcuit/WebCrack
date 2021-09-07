@@ -77,7 +77,7 @@ class CrackTask:
         path = self.parser.post_path
         data[self.parser.username_keyword] = username
         data[self.parser.password_keyword] = password
-        res = conn.post(url=path, data=data, headers=get_random_headers(), timeout=self.timeout, verify=False,
+        res = conn.get(url=path, params=data, headers=get_random_headers(), timeout=self.timeout, verify=False,
                         allow_redirects=True, proxies=self.requests_proxies)
         time.sleep(crackConfig["delay"])
         res.encoding = res.apparent_encoding
@@ -134,10 +134,11 @@ class CrackTask:
                         break
                 if right_pass:
                     cur_length = get_res_length(res)
-                    if self.parser.username_keyword in res.text and self.parser.password_keyword in res.text:
-                        continue
                     if cur_length != error_length:
                         return username, password
+                    if self.parser.username_keyword in res.text and self.parser.password_keyword in res.text:
+                        continue
+
                 else:
                     continue
         return False, False
